@@ -1,4 +1,4 @@
-asyncapi: '2.3.0'
+asyncapi: '2.0.0'
 info:
   title: International DATIS Push API
   version: '1.0.0'
@@ -13,8 +13,6 @@ servers:
     url: discovery.caero-non-prod.useast.streams.forge.honeywell.com:443
     protocol: kafka-secure
     description: Honeywell Kafka Cluster
-    security:
-      - plain: []
 
 defaultContentType: application/json
 
@@ -154,11 +152,6 @@ components:
       - isDatisEnabled
       - arrival
       
-
-  securitySchemes:
-    plain:
-      type: plain
-      description: Provide your username and password for SASL authentication.
 
   operationTraits:
     kafka:
